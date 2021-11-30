@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "145369077856",
+    "project_id": "munzesta-project",
+    "storage_bucket": "munzesta-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145369077856:android:102fbb959eaba2d1b08b05",
+        "android_client_info": {
+          "package_name": "com.example.ms_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145369077856-piqiq1t50hp2lji95hqipoj0mo5flull.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ms_project",
+            "certificate_hash": "a38f7cf761d0b3971410f4bbf9e2c78c9f972ab7"
+          }
+        },
+        {
+          "client_id": "145369077856-c87iemkvq4gummvhs51lqnb31u7hhb7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcZKJotzmNYqUpT8CaBzAgyKzDqyFKfZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145369077856-c87iemkvq4gummvhs51lqnb31u7hhb7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
