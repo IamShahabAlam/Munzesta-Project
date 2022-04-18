@@ -1,0 +1,245 @@
+VerifyNo.dart
+
+import 'dart:ffi';
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:ms_project/components/otpCard.dart';
+import 'package:ms_project/screens/otpScreen.dart';
+
+class VerifyNo extends StatefulWidget {
+  @override
+  _VerifyNoState createState() => _VerifyNoState();
+}
+
+class _VerifyNoState extends State<VerifyNo> {
+
+  String verificationid = "";
+
+  @override
+  Widget build(BuildContext context) {
+    FirebaseAuth auth = FirebaseAuth.instance;
+
+   final TextEditingController numController = TextEditingController();
+   
+   Future <Void>fetchotp() async{       // using Future because of async function
+
+      await auth.verifyPhoneNumber(
+        phoneNumber: numController.text, 
+        verificationCompleted: (PhoneAuthCredential credential) async { await auth.signInWithCredential(credential); }, 
+        verificationFailed: (FirebaseAuthException e) async { 
+          if (e.code == "invalid-phone-number"){
+            print("Invalid Phone number");
+          }
+         }, 
+        codeSent: (String verificationId, int ? resendToken) async { this.verificationid = verificationid;}, 
+       
+        codeAutoRetrievalTimeout: (String verificationid) {});
+
+       Navigator.push(context, MaterialPageRoute(builder: (context) =>OtpScreen(phone: numController.text,verificationid: verificationid,) ));
+   }
+
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Container( 
+            height: MediaQuery.of(context).size.height, 
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(image: DecorationImage(image: 
+            AssetImage("assets/bg.png"), fit: BoxFit.cover),),
+            child: Stack(
+              children: [
+                 Positioned( bottom: MediaQuery.of(context).size.height*0.78,
+                   child: 
+                  //  Image.asset("assets/logoff.png",height: 150 , width:200 ,),
+
+                  Container(
+                          alignment: Alignment.topLeft,
+                          margin: EdgeInsets.only(left:20),
+                          height: 150, width: 200 ,
+                          decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.contain ,alignment: Alignment.topLeft,image: AssetImage("assets/logoff.png"),)),),
+                   ),
+
+                   OTPCard(
+                    title: "Verify Your Number",
+                    details: "We will send an One Time Password on this mobile number." , 
+                    path: "assets/no.png" , 
+                    prefixText: " ???? (+92) ",
+                    controller: numController ,
+                    btnText: "Send"  ,
+                    onpressed: (){ fetchotp(); },
+                   
+                   ),
+
+//  
+
+              ],),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+otpScreen.dart
+
+
+
+
+import 'dart:ffi';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:ms_project/components/formBtn.dart';
+import 'package:ms_project/screens/afterVerify.dart';
+
+class OtpScreen extends StatefulWidget {
+  
+  OtpScreen({this.phone,this.verificationid});
+  
+  final String phone, verificationid;
+
+
+  @override
+  _OtpScreenState createState() => _OtpScreenState();
+}
+
+class _OtpScreenState extends State<OtpScreen> {
+
+    FirebaseAuth auth = FirebaseAuth.instance;
+
+    final TextEditingController otpController = TextEditingController();
+      String verificationid = "";
+
+
+    void signInWithPhoneAuthCredential(
+      PhoneAuthCredential phoneAuthCredential) async {
+    try {
+      final authCredential =
+      await auth.signInWithCredential(phoneAuthCredential);
+
+      if (authCredential.user != null) {
+        Navigator.push(context, MaterialPageRoute(builder:  (context) => AfterVerify()));
+      }
+    } on FirebaseAuthException catch (e) {
+      print("catch");
+    }
+  }
+
+    Future <Void> verifyOtp() {
+    PhoneAuthCredential phoneAuthCredential =
+    PhoneAuthProvider.credential(
+        verificationId: verificationid , smsCode: otpController.text);
+
+    signInWithPhoneAuthCredential(phoneAuthCredential);
+
+
+        // Navigator.push(context, MaterialPageRoute(builder: (context) => AfterVerify()));
+    }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Container( 
+            height: MediaQuery.of(context).size.height, 
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(image: DecorationImage(image: 
+            AssetImage("assets/bg.png"), fit: BoxFit.cover),),
+            child: Stack(
+              children: [
+                 Positioned( bottom: MediaQuery.of(context).size.height*0.78,
+                   child: 
+                  //  Image.asset("assets/logoff.png",height: 150 , width:200 ,),
+
+                  Container(
+                          alignment: Alignment.topLeft,
+                          margin: EdgeInsets.only(left:20),
+                          height: 150, width: 200 ,
+                          decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.contain ,alignment: Alignment.topLeft,image: AssetImage("assets/logoff.png"),)),),
+                   ),
+
+// OTP CARD HERE
+
+
+                Container(
+      margin: EdgeInsets.only(left:25, right: 25, top: MediaQuery.of(context).size.height*0.26),
+      height: MediaQuery.of(context).size.height*0.5,
+      width: double.infinity,
+      decoration: BoxDecoration(
+     //  gradient: LinearGradient(end: Alignment.topRight ,
+     //  colors: [Colors.white,Colors.white,Colors.white,Colors.white,Color(0xff941B50),]),
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(30),
+      boxShadow: [BoxShadow(color: Colors.black54 , blurRadius: 12,spreadRadius: 3) ,],
+      
+    ),
+    child: Column(children: [
+     
+     SizedBox(height: 20,),
+      
+        Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+
+            Text( "OTP Verification" ,style: TextStyle(
+                 color: Colors.black ,fontSize: 23,fontWeight: FontWeight.bold),),
+            Image.asset("assets/otp2.png", height: 45, width: 45,),
+                  
+            ],),
+       
+      
+      Padding(
+        padding: const EdgeInsets.all(18.0),
+        child: Text("We have sent you an One Time Password on this (+92) ${widget.phone} number.", style: TextStyle(fontSize: 15 ,color: Colors.grey[700]), textAlign: TextAlign.center,),
+      ),
+
+    Column(
+      children: [
+ 
+        // Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //   children: [
+        //   Container(
+        //     margin: EdgeInsets.only(left: 30,top: 25),
+        //     child: Text("Mobile Number",style: TextStyle( fontSize: 15,color: Colors.blue[900]),),),
+        //   Container( margin: EdgeInsets.only(right: 30,top: 25),
+        //     child: Icon(FontAwesomeIcons.mobileAlt, size: 20,color: Colors.blue[900]),)
+        // ],),
+          //   height: 35, width: 240,
+    
+    
+    Container( 
+      height: MediaQuery.of(context).size.height*0.08, 
+      width: MediaQuery.of(context).size.width*0.72,
+      margin: EdgeInsets.only(top: 8),
+     
+        ),
+      
+
+       ],
+    ),
+
+
+
+// Login Button       
+                  
+      FormBtn(onpressed:  (){verifyOtp();} ,text: "Verify",height: 0.05, width: 0.0,),                      
+    ],),
+    
+    ),
+
+              ],),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+

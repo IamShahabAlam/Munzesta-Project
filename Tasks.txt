@@ -1,0 +1,8 @@
+
+			Munzesta Solutions Final Project
+ - Sign in Page.
+ - Sign Up Page.
+ - One Time Passwod Page.
+ - Home Screen Page.
+
+	(All With FireBase Integration)
