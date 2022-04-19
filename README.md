@@ -52,6 +52,6 @@ E-Shop Login Page built with Flutter.
             </div> <br/>
             
 ### For Assistance
-> Watch this <a href="https://youtu.be/W19IfZ-nqB8"> video </a> 
+- Watch this <a href="https://youtu.be/W19IfZ-nqB8"> video </a> 
 
 > :blue_heart: &nbsp; Fluttering
