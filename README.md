@@ -1,8 +1,9 @@
-# Login SignUp & No Verification With Firebase
+# Login SignUp & Phone Auth With Firebase
 
 A Simple Logo Page built with Flutter.
 Personal Card built with Flutter.
 E-Shop Login Page built with Flutter.
+
 ## Features
 
 - Static Pages
@@ -49,5 +50,8 @@ E-Shop Login Page built with Flutter.
 
 </a>
             </div> <br/>
+            
+### For Assistance
+> Watch this <a href="https://youtu.be/W19IfZ-nqB8"> video </a> 
 
 > :blue_heart: &nbsp; Fluttering
