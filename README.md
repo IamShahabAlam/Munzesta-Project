@@ -20,6 +20,7 @@ E-Shop Login Page built with Flutter.
 ![3](https://user-images.githubusercontent.com/82330891/164298982-f4b9e5d7-8a91-4945-b347-a05347330e64.jpg)
 ![4](https://user-images.githubusercontent.com/82330891/164298986-92f21a7e-fe9c-474a-8949-44b55d641c48.jpg)
 
+<img height="250px" width="100px" src="https://user-images.githubusercontent.com/82330891/164298975-dbee55ad-27b9-4fc8-8f60-dd56adc7862e.jpg" />
 
 
 <!-- ## Result Screen -->
