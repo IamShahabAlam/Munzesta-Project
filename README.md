@@ -20,10 +20,10 @@ E-Shop Login Page built with Flutter.
 <img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164298980-3a97d35d-b985-4e41-b720-54dadf39a36c.jpg" />
 <img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164298982-f4b9e5d7-8a91-4945-b347-a05347330e64.jpg" />
 <img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164298986-92f21a7e-fe9c-474a-8949-44b55d641c48.jpg" />
-<img height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532202-c14995ee-d9bb-44e0-96a9-4436699abe19.jpg" />
-<img height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532208-8722e46c-727d-485a-8415-c99143ee30ea.jpg" />
-<img height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532210-41df6c91-387d-486a-8946-66e9c22bde06.jpg" />
-<img height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532212-f6f06c06-ca03-4520-b91c-bbeebce52381.jpg" />
+<img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532202-c14995ee-d9bb-44e0-96a9-4436699abe19.jpg" />
+<img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532208-8722e46c-727d-485a-8415-c99143ee30ea.jpg" />
+<img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532210-41df6c91-387d-486a-8946-66e9c22bde06.jpg" />
+<img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532212-f6f06c06-ca03-4520-b91c-bbeebce52381.jpg" />
 
 
 <!-- <img height="600px" width="300px" src="" /> -->
