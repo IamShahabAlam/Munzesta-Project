@@ -23,7 +23,7 @@ E-Shop Login Page built with Flutter.
 <img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532202-c14995ee-d9bb-44e0-96a9-4436699abe19.jpg" />
 <img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532208-8722e46c-727d-485a-8415-c99143ee30ea.jpg" />
 <img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532210-41df6c91-387d-486a-8946-66e9c22bde06.jpg" />
-<img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532212-f6f06c06-ca03-4520-b91c-bbeebce52381.jpg" />  <br/>
+<img  height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/164532212-f6f06c06-ca03-4520-b91c-bbeebce52381.jpg" />  <br/>
 
 
 <!-- <img height="600px" width="300px" src="" /> -->
