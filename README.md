@@ -4,7 +4,8 @@ Flutter and Firebase Integration (Flutter 2.0)
 
 ## Features
 
-- 
+- Email Signup
+- Phone Signup
 
 ## Demonstration
 
