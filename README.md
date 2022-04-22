@@ -1,15 +1,10 @@
 # Login SignUp & Phone Auth With Firebase
 
-A Simple Logo Page built with Flutter.
-Personal Card built with Flutter.
-E-Shop Login Page built with Flutter.
+Flutter and Firebase Integration (Flutter 2.0)
 
 ## Features
 
-- Static Pages
-- Textfiel Properties used
-- Circle Avatar
-- Gradient Colors
+- 
 
 ## Demonstration
 
