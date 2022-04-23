@@ -12,7 +12,6 @@ Flutter and Firebase Integration (Flutter 2.0)
 - Email Login 
 - Phone Login 
 - 8 Screens
-- 
 
 ## Demonstration
 
