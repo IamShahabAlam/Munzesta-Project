@@ -4,10 +4,15 @@ Flutter and Firebase Integration (Flutter 2.0)
 
 ## Features
 
+- Firebase Database
+- Firebase Authentication
 - Email Signup
 - Phone Signup
 - OTP Verification
 - Email Login 
+- Phone Login 
+- 8 Screens
+- 
 
 ## Demonstration
 
