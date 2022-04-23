@@ -6,6 +6,8 @@ Flutter and Firebase Integration (Flutter 2.0)
 
 - Email Signup
 - Phone Signup
+- OTP Verification
+- Email Login 
 
 ## Demonstration
 
