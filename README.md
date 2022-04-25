@@ -62,7 +62,7 @@ Flutter and Firebase Integration (Flutter 2.0)
 <img  alt="Gmail" height="22px" width="25px"  src="https://cdn-icons-png.flaticon.com/512/281/281769.png" />
 
 </a>
-            </div> <br/>
+            </div>
             
 ### For Assistance
 - Watch this <a href="https://youtu.be/W19IfZ-nqB8"> video </a> <br/>
